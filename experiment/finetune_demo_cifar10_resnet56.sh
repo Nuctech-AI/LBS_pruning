@@ -1,0 +1,1 @@
+python3 finetune_demo.py --dataset cifar10 --network resnet56 --data_dir /mnt/MountVolume3/chensitong/data   --result_dir result/cifar10/resnet56/0019 --model_dir pre_models/cifar10/resnet56/resnet_56.pt --config_dir config/cifar10/config_resnet56.yaml --batch_size 128

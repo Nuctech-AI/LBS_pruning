@@ -1,0 +1,32 @@
+model: 'resnet' #'resnet' 'densenet' 'mobilenet' 'vgg' 'resnext'
+type: 'prune' # 'l1norm' 'sensetivity' 'prune'
+downsample:
+  'layer1.0.downsample.0.weight': 'conv1.weight'
+  'layer2.0.downsample.0.weight': 'layer1.2.conv3.weight'
+  'layer3.0.downsample.0.weight': 'layer2.3.conv3.weight'
+  'layer4.0.downsample.0.weight': 'layer3.5.conv3.weight'
+stage:
+  - - 'layer1.0.conv3.weight'
+    - 'layer1.0.downsample.0.weight'
+    - 'layer1.1.conv3.weight'
+    - 'layer1.2.conv3.weight'
+
+  - - 'layer2.0.conv3.weight'
+    - 'layer2.0.downsample.0.weight'
+    - 'layer2.1.conv3.weight'
+    - 'layer2.2.conv3.weight'
+    - 'layer2.3.conv3.weight'
+
+  - - 'layer3.0.conv3.weight'
+    - 'layer3.0.downsample.0.weight'
+    - 'layer3.1.conv3.weight'
+    - 'layer3.2.conv3.weight'
+    - 'layer3.3.conv3.weight'
+    - 'layer3.4.conv3.weight'
+    - 'layer3.5.conv3.weight'
+
+  - - 'layer4.0.conv3.weight'
+    - 'layer4.0.downsample.0.weight'
+    - 'layer4.1.conv3.weight'
+    - 'layer4.2.conv3.weight'
+channel_select: 0

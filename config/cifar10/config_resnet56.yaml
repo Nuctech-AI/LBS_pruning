@@ -1,0 +1,42 @@
+model: 'resnet'
+delta_loss: 0.019
+groups:
+concat:
+downsample:
+stage:
+  - - 'conv1.weight'
+    - 'layer1.0.conv2.weight'
+    - 'layer1.1.conv2.weight'
+    - 'layer1.2.conv2.weight'
+    - 'layer1.3.conv2.weight'
+    - 'layer1.4.conv2.weight'
+    - 'layer1.5.conv2.weight'
+    - 'layer1.6.conv2.weight'
+    - 'layer1.7.conv2.weight'
+    - 'layer1.8.conv2.weight'
+  - - 'layer2.0.conv2.weight'
+    - 'layer2.1.conv2.weight'
+    - 'layer2.2.conv2.weight'
+    - 'layer2.3.conv2.weight'
+    - 'layer2.4.conv2.weight'
+    - 'layer2.5.conv2.weight'
+    - 'layer2.6.conv2.weight'
+    - 'layer2.7.conv2.weight'
+    - 'layer2.8.conv2.weight'
+  - - 'layer3.0.conv2.weight'
+    - 'layer3.1.conv2.weight'
+    - 'layer3.2.conv2.weight'
+    - 'layer3.3.conv2.weight'
+    - 'layer3.4.conv2.weight'
+    - 'layer3.5.conv2.weight'
+    - 'layer3.6.conv2.weight'
+    - 'layer3.7.conv2.weight'
+    - 'layer3.8.conv2.weight'
+name_bolck_end:
+    - 'conv1.weight'
+    - 'layer2.0.conv2.weight'
+    - 'layer3.0.conv2.weight'
+channel_select: 1
+channel_cor:
+    'layer2.0.conv2.weight': 'layer1.8.conv2.weight'
+    'layer3.0.conv2.weight': 'layer2.8.conv2.weight'

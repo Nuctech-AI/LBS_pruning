@@ -1,0 +1,5 @@
+model: 'vgg_bn'
+concat:
+groups:
+downsample:
+stage:

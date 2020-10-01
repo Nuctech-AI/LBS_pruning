@@ -1,0 +1,1 @@
+python3 test_demo.py --dataset imagenet --network resnet50 --data_dir /mnt/MountVolume3/chensitong/data  --result_dir result/imagenet/resnet50/0050 --model_dir result/imagenet/resnet50/0050/best-105.pth --config_dir config/imagenet/config_resnet50.yaml

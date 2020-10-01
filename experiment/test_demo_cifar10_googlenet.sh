@@ -1,0 +1,1 @@
+python3 test_demo.py --dataset cifar10 --network googlenet --data_dir /mnt/MountVolume3/chensitong/data  --result_dir result/cifar10/googlenet/0005 --model_dir result/cifar10/googlenet/0005/best-280.pth --config_dir config/cifar10/config_googlenet.yaml
